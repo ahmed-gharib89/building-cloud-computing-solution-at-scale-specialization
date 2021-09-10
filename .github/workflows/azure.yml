@@ -1,4 +1,4 @@
-name: Python azure application test with github actions
+name: Azure build
 
 # Controls when the workflow will run
 on:

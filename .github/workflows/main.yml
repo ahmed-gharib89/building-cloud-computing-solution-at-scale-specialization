@@ -1,4 +1,4 @@
-name: Python application test with github actions
+name: Local build
 
 # Controls when the workflow will run
 on:
