@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: |
           make install
-        working_directory: ${{ env.working_directory }}
+        working-directory: ${{ env.working_directory }}
 
       # Lint with pylint
       - name: Lint with pylint
