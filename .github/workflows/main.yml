@@ -17,12 +17,14 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      working_directory: ./cloud-computing-foundations/scaffold/
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        working_directory: ./cloud-computing-foundations/scaffold/
+        
 
       # Setup python version 3.8
       - name: Setup python version 3.8
@@ -34,18 +36,22 @@ jobs:
       - name: Install dependencies
         run: |
           make install
+        working_directory: ${{ env.working_directory }}
 
       # Lint with pylint
       - name: Lint with pylint
         run: |
           make lint
+        working_directory: ${{ env.working_directory }}
 
       # Run tests
       - name: Test with pytest
         run: |
           make test
+        working_directory: ${{ env.working_directory }}
 
       # Format code with python black
       - name: Format code with python black
         run: |
           make format
+        working_directory: ${{ env.working_directory }}
