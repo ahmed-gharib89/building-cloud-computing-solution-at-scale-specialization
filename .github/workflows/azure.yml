@@ -26,11 +26,11 @@ jobs:
       - uses: actions/checkout@v2
         
 
-      # Setup python version 3.7.3
-      - name: Setup python version 3.7.3
+      # Setup python version 3.7
+      - name: Setup python version 3.7
         uses: actions/setup-python@v1
         with:
-          python-version: 3.7.3
+          python-version: 3.7
       
       # Install dependencies
       - name: Install dependencies
